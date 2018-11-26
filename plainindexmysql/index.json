@@ -1,0 +1,41 @@
+{
+  "title": "Manticore Introduction",
+  "description": "Learn how to perform basic queries with Manticore",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      }
+
+    ],
+    "intro": {
+      "text": "intro.md",
+      "courseData":"background.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "assets" : {
+"host01": [ {"file":"sakila-schema.sql","target":"~/"},{"file":"sakila-data.sql","target":"~/"},{"file":"sphinx.conf","target":"~/"}]
+},
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "docker"
+  }
+}
