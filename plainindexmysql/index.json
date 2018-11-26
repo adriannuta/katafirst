@@ -1,6 +1,6 @@
 {
   "title": "Manticore Search plain indexes",
-  "description": "Learn how to perform basic queries with Manticore",
+  "description": "Learn how to index data into Manticore from MySQL",
   "details": {
     "steps": [
       {
