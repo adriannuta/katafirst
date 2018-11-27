@@ -29,8 +29,8 @@
     }
   },
   "assets" : {
-  "client": [ {"file":"sphinx.conf","target":"~/"}],
-"host01" : [{"file":"sphinx.conf","target":"/etc/sphinxsearch/", "chmod": "+x"}]
+  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/"}],
+"host01" : [{"file":"sphinxsearch/sphinx.conf","target":"/etc/sphinxsearch/", "chmod": "+x"}]
 },
   "environment": {
       "showdashboard": true,
