@@ -1,2 +1,2 @@
-apt update && apt install mysql-client wget -y
+apt update && apt install mysql-client -y
 
