@@ -29,8 +29,9 @@
     }
 	,
   "assets" : {
-  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/"}],
-"host01" : [{"file":"sphinxsearch/sphinx.conf","target":"/etc/sphinxsearch/", "chmod": "+x"}]
+  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/tutorial/"}
+, {"file":"sakila-data.sql","target":"~/tutorial/"} ,{"file":"sakila-schema.sql","target":"~/tutorial/"}
+]
 }
   },
   "environment": {
