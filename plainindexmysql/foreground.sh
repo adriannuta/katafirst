@@ -5,7 +5,7 @@ tar zxvf sakila-db.tar.gz
 chmod +x wait-for-it.sh
 ./wait-for-it.sh -h docker -p 3306 -t 30 --
 cd sakila-db
-mysql -P3306 -h docker -uuser -ppass123 sakila < sakila-schema.sql
-mysql -P3306 -h docker -uuser -ppass123 sakila < sakila-data.sql
+mysql -P3306 -h docker -uroot -psimple sakila < sakila-schema.sql
+mysql -P3306 -h docker -uroot -psimple sakila < sakila-data.sql
 
 
