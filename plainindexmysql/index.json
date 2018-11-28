@@ -29,9 +29,7 @@
     }
 	,
   "assets" : {
-  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/tutorial/"}
-, {"file":"sakila-data.sql","target":"~/tutorial/"} ,{"file":"sakila-schema.sql","target":"~/tutorial/"}
-]
+  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/tutorial/"}]
 }
   },
   "environment": {
