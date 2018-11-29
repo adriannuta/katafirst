@@ -17,5 +17,5 @@ Copy the sphinx.conf to the data container:
 
 Launch the Manticore search image with the config container:
 
-`docker run --name manticore -p 9306:9306 --volumes-from confContainer -d manticoresearch/manticore`{{execute}}
+`docker run --name manticore -p 9306:9306 --volumes-from confContainer --link mysql:mysql -d manticoresearch/manticore`{{execute}}
 
