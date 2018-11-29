@@ -8,4 +8,6 @@ cd sakila-db
 mysql -P3306 -h docker -uroot -psimple sakila < sakila-schema.sql
 mysql -P3306 -h docker -uroot -psimple sakila < sakila-data.sql
 
+cd ..
+
 

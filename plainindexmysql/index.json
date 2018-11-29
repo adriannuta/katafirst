@@ -31,7 +31,7 @@
     }
 	,
   "assets" : {
-  "client": [ {"file":"sphinxsearch/sphinx.conf","target":"~/tutorial/"}]
+  "client": [ {"file":"sphinx.conf","target":"~/tutorial/"}]
 }
   },
   "environment": {
