@@ -1,8 +1,13 @@
-## Indexing from MySQL
+# Indexing data
 
-We index the data:
-`docker run -d --name mysql  -e MYSQL_ROOT_PASSWORD=simple -e MYSQL_DATABASE=sakila  -e MYSQL_USER=user -e MYSQL_PASSWORD=pass123  mysql`{{execute}}`
-`mysql -h docker sakila -uuser -ppass123 < sakila-schema.sql`{{execute}}`
-`mysql -h docker sakila -uuser -ppass123 < sakila-data.sql`{{execute}}`
+The configuration in our example will index the film table from sakila database: 
+
 `docker exec -it manticore indexer  sakila_film  --rotate`{{execute}}
 
+Now we can start running some queries, let's see first if the index is there. First we connect to Manticore via SphinxQL:
+
+`mysql -P9306 -h docker`{{execute}}
+
+`SHOW TABLES;`{{execute}}
+
+`SELECT * FROM sakila_film`{{execute}}
