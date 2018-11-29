@@ -10,4 +10,4 @@ Now we can start running some queries, let's see first if the index is there. Fi
 
 `SHOW TABLES;`{{execute}}
 
-`SELECT * FROM sakila_film`{{execute}}
+`SELECT * FROM sakila_film;`{{execute}}
