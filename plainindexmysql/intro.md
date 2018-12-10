@@ -1,0 +1,1 @@
+In this tutorial you will learn how to create an index in Manticore Search using data from a MySQL database.
