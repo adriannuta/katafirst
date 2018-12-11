@@ -2,7 +2,7 @@
 
 Let's connect to Manticore Search
 
-`mysql -P9305 -h0`{{execute}}
+`mysql -P9306 -h0`{{execute}}
 
 And check the indexed available
 
