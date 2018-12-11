@@ -1,22 +1,10 @@
-## Executing search queries
+## Refreshing data in the index
 
-Now we have some data, we can do some queries.
+Plain indexes are immutable, this means if we want to refresh the content in it we need to reindex it enterely. 
+For  attributes it is possible to use 'UPDATE' statement (just like in MYSQL), however for new rows, modified fulltext fields or make content dissapear, we need to reindex.
 
-Fulltext searches are done with the special clause MATCH, which is the main workhorse.
+Unlike the first time we indexes, now the searchd daemon runs and have the index loaded. This means it puts a lock on the index. 
+To be able to make a new version of the index, the 'indexer' utility will create a new copy and when ready it will inform the daemon about it.
+This is done adding the '--rotate' parameter.
 
-`SELECT * FROM testrt WHERE MATCH('list of laptops');`{{execute}}
-
-As you see in the result set we can only get back the doc id and the attributes. The fulltext fields values are not returned since the text is only indexed, not stored also, and it.s impossible to rebuild the original text.
-
-Now let.s add some filtering and more ordering:
-
-`SELECT *,WEIGHT() FROM testrt WHERE MATCH('list of laptops') AND gid>10  ORDER BY WEIGHT() DESC,gid DESC;`{{execute}}
-
-
-The search above does a simple matching, where all words need to be present. But we can do more:
-
-`SELECT *,WEIGHT() FROM testrt WHERE MATCH('"list of business laptops"/3');`{{execute}}
-
-SHOW META returns information about previous executed query, that is number of found records (in total_found), execution time (in time) and statistics about the keywords of the search.
-
-`SHOW META;`{{execute}}
+`indexer sakila_film --rotate`{{execute}}

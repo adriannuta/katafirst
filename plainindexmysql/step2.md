@@ -1,13 +1,14 @@
-# Indexing data
+## Indexing 
 
-The configuration in our example will index the film table from sakila database: 
+Our  index 'sakila_film' is created in sphinx.conf but has no data. Searchd will complain about this when starts, this is normal.
 
-`docker exec -it manticore indexer  sakila_film  --rotate`{{execute}}
+To populate the index we use the indexer tool:
 
-Now we can start running some queries, let's see first if the index is there. First we connect to Manticore via SphinxQL:
+`indexer sakila_film`{{execute}}
 
-`mysql -P9306 -h docker`{{execute}}
+The utility will output information about the created index, like how many document were found and how fast indexing was. 
 
-`SHOW TABLES;`{{execute}}
+Now let's start the searchd daemon:
 
-`SELECT * FROM sakila_film;`{{execute}}
+`searchd`{{execute}}
+
