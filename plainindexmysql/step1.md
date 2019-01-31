@@ -32,13 +32,15 @@ source sakila_film {
         sql_pass = pass123
         sql_db = sakila
         sql_query_pre = SET NAMES utf8
-        sql_query =  SELECT film_id, title, description, release_year,rental_rate from film join film_category on film.id=film_category.film_id
+        sql_query =  SELECT film.film_id, title, description,category_id, release_year,rental_rate from film join film_category on film.film_id=film_category.film_id
         sql_field_string = title
+        sql_field_string = description
         sql_attr_uint = release_year
         sql_attr_uint = category_id
         sql_attr_float = rental_rate
 
 
 }
+
 
 ```
