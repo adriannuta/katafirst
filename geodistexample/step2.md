@@ -2,8 +2,7 @@
 
 Manticore provides function GEODIST which can be used to calculate distance between 2 geocoordinates
 
-```GEODIST(lat1, lon1, lat2, lon2, { option=value, ... })
-```
+```GEODIST(lat1, lon1, lat2, lon2, { option=value, ... })```
 
 The first 4 parameters are the geocoordinate pairs. 
 The last parameter uses a simple format similar to JSON to define several options for the GEODIST function:
