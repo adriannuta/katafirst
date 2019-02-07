@@ -56,8 +56,10 @@ source movies
 	csvpipe_attr_float = aspect_ration
 	csvpipe_attr_uint = movie_facebook_likes	
 }
+```
 
 The index declaration is simple. We specify the location of the index and tell the index to use the above source.
+
 ```
 index movies
 {
