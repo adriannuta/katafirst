@@ -13,7 +13,7 @@ If our CSV doesn't have this, we can add it easy with an awk command:
 
 Manticore also requires to have no header in the CSV. In our sample CSV we have header, so we're going to remove it:
 
-`sed -i `1d` movie.csv`{{execute}}
+`sed -i \`1d\` movie.csv`{{execute}}
 
 2. Create source and index
 
