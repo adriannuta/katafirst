@@ -9,7 +9,7 @@ One of the data sources can be a CSV or TSV file. There are mainly 2 things we n
 Manticore requires the first column to represent the document id, which needs to be an unique integer number. 
 If our CSV doesn't have this, we can add it easy with an awk command:
 
-`awk -v OFS=, 'NR ==1 {print "ID", $0; next} {print (NR-1), $0}' movie_metadata.csv > movie.csv` {{execute}}
+`awk -v OFS=, 'NR ==1 {print "ID", $0; next} {print (NR-1), $0}' movie_metadata.csv > movie.csv`{{execute}}
 
 Manticore also requires to have no header in the CSV. In our sample CSV we have header, so we're going to remove it:
 
